@@ -545,6 +545,23 @@ namespace JikanDotNet
         Task<PaginatedJikanResponse<ICollection<Anime>>> GetTopAnimeAsync(int page, CancellationToken cancellationToken = default);
 
         /// <summary>
+        /// Returns list of top anime.
+        /// </summary>
+        /// <param name="filter">Filter determining result of request (e.g. TopAnimeFilter.Airing will return top airing anime.)</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>List of top anime.</returns>
+        Task<PaginatedJikanResponse<ICollection<Anime>>> GetTopAnimeAsync(TopAnimeFilter filter, CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Returns list of top anime.
+        /// </summary>
+        /// <param name="filter">Filter determining result of request (e.g. TopAnimeFilter.Airing will return top airing anime.)</param>
+        /// <param name="page">Index of page folding 25 records of top ranging (e.g. 1 will return first 25 records, 2 will return record from 26 to 50 etc.)</param>
+        /// <param name="cancellationToken">Cancellation token.</param>
+        /// <returns>List of top anime.</returns>
+        Task<PaginatedJikanResponse<ICollection<Anime>>> GetTopAnimeAsync(TopAnimeFilter filter, int page, CancellationToken cancellationToken = default);
+
+        /// <summary>
         /// Returns list of top manga.
         /// </summary>
         /// <param name="cancellationToken">Cancellation token.</param>
