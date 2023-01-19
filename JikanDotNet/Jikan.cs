@@ -1193,7 +1193,7 @@ namespace JikanDotNet
 		
 		/// <inheritdoc />
 		public Task<PaginatedJikanResponse<ICollection<Anime>>> SearchAnimeAsync(string query, CancellationToken cancellationToken = default)
-			=> SearchAnimeAsync(new AnimeSearchConfig {Query = query});
+			=> SearchAnimeAsync(new AnimeSearchConfig {Query = query}, cancellationToken);
 		
 		/// <inheritdoc />
 		public async Task<PaginatedJikanResponse<ICollection<Anime>>> SearchAnimeAsync(AnimeSearchConfig searchConfig, CancellationToken cancellationToken = default)
@@ -1205,7 +1205,7 @@ namespace JikanDotNet
 		
 		/// <inheritdoc />
 		public Task<PaginatedJikanResponse<ICollection<Manga>>> SearchMangaAsync(string query, CancellationToken cancellationToken = default)
-			=> SearchMangaAsync(new MangaSearchConfig {Query = query});
+			=> SearchMangaAsync(new MangaSearchConfig {Query = query}, cancellationToken);
 		
 		/// <inheritdoc />
 		public async Task<PaginatedJikanResponse<ICollection<Manga>>> SearchMangaAsync(MangaSearchConfig searchConfig, CancellationToken cancellationToken = default)
@@ -1217,7 +1217,7 @@ namespace JikanDotNet
 
 		/// <inheritdoc />
 		public Task<PaginatedJikanResponse<ICollection<Person>>> SearchPersonAsync(string query, CancellationToken cancellationToken = default)
-			=> SearchPersonAsync(new PersonSearchConfig {Query = query});
+			=> SearchPersonAsync(new PersonSearchConfig {Query = query}, cancellationToken);
 		
 		/// <inheritdoc />
 		public async Task<PaginatedJikanResponse<ICollection<Person>>> SearchPersonAsync(PersonSearchConfig searchConfig, CancellationToken cancellationToken = default)
@@ -1229,7 +1229,7 @@ namespace JikanDotNet
 
 		/// <inheritdoc />
 		public Task<PaginatedJikanResponse<ICollection<Character>>> SearchCharacterAsync(string query, CancellationToken cancellationToken = default)
-			=> SearchCharacterAsync(new CharacterSearchConfig {Query = query});
+			=> SearchCharacterAsync(new CharacterSearchConfig {Query = query}, cancellationToken);
 		
 		/// <inheritdoc />
 		public async Task<PaginatedJikanResponse<ICollection<Character>>> SearchCharacterAsync(CharacterSearchConfig searchConfig, CancellationToken cancellationToken = default)
@@ -1240,7 +1240,7 @@ namespace JikanDotNet
 		}
 	
 		/// <inheritdoc />
-		public  Task<PaginatedJikanResponse<ICollection<UserMetadata>>> SearchUserAsync(string query, CancellationToken cancellationToken = default) => SearchUserAsync(new UserSearchConfig {Query = query});
+		public  Task<PaginatedJikanResponse<ICollection<UserMetadata>>> SearchUserAsync(string query, CancellationToken cancellationToken = default) => SearchUserAsync(new UserSearchConfig {Query = query}, cancellationToken);
 
 		/// <inheritdoc />
 		public async Task<PaginatedJikanResponse<ICollection<UserMetadata>>> SearchUserAsync(UserSearchConfig searchConfig, CancellationToken cancellationToken = default)
@@ -1251,7 +1251,7 @@ namespace JikanDotNet
 		}
 		
 		/// <inheritdoc />
-		public  Task<PaginatedJikanResponse<ICollection<Club>>> SearchClubAsync(string query, CancellationToken cancellationToken = default) => SearchClubAsync(new ClubSearchConfig {Query = query});
+		public  Task<PaginatedJikanResponse<ICollection<Club>>> SearchClubAsync(string query, CancellationToken cancellationToken = default) => SearchClubAsync(new ClubSearchConfig {Query = query}, cancellationToken);
 
 		/// <inheritdoc />
 		public async Task<PaginatedJikanResponse<ICollection<Club>>> SearchClubAsync(ClubSearchConfig searchConfig, CancellationToken cancellationToken = default)
