@@ -14,19 +14,28 @@
     <FileVersion>2.4.3.0</FileVersion>
     <LangVersion>latest</LangVersion>
     <AssemblyVersion>2.4.3.0</AssemblyVersion>
-    <TargetFrameworks>netcoreapp3.1;netstandard2.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1;netstandard2.0;net6.0;net7.0</TargetFrameworks>
     <PackageVersion>2.4.3</PackageVersion>
     <PackageLicenseUrl>https://github.com/Ervie/jikan.net/blob/master/LICENSE</PackageLicenseUrl>
     <PackageIcon>jikan-logo.png</PackageIcon>
 	<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 	<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+	<Platforms>AnyCPU;x64</Platforms>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DocumentationFile>bin\Debug\netstandard2.0\JikanDotNet.xml</DocumentationFile>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DocumentationFile>bin\Debug\netstandard2.0\JikanDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard2.0\JikanDotNet.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <DocumentationFile>bin\Release\netstandard2.0\JikanDotNet.xml</DocumentationFile>
   </PropertyGroup>
 
@@ -36,7 +45,7 @@
 
   <ItemGroup>
     <None Include="jikan-logo.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
